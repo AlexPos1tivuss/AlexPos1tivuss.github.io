@@ -1,46 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-	<div class="container">
-		<div class="inner">
-			<div class="item">
-				<img src="1.png" alt="" class="img">
-				<button class="btn" id="btn1">Add</button>
-			</div>
-			<div class="item">
-				<img src="2.png" alt="" class="img">
-				<button class="btn" id="btn2">Add</button>
-			</div>
-			<div class="item">
-				<img src="3.png" alt="" class="img">
-				<button class="btn" id="btn3">Add</button>
-			</div>
-			<div class="item">
-				<img src="4.png" alt="" class="img">
-				<button class="btn" id="btn4">Add</button>
-			</div>
-			<div class="item">
-				<img src="5.png" alt="" class="img">
-				<button class="btn" id="btn5">Add</button>
-			</div>
-			<div class="item">
-				<img src="6.png" alt="" class="img">
-				<button class="btn" id="btn6">Add</button>
-			</div>
-		</div>
-	</div>
-	<div class="usercard" id="usercard">
-		
-	</div>
+    <div class="usercard" id="usercard"></div>
+    <div class="container">
+        <div class="inner">
+            <div class="column">
+                <div class="split-btn">
+					<button class="primary-btn" id="btn1" onclick="toggleDropdown('dropdown1')">Факультет</button>
+					<div class="dropdown-content" id="dropdown1">
+						<button onclick="selectQuantity(1, this.innerText, 1)">Экономический</button>
+						<button onclick="selectQuantity(2, this.innerText, 1)">Юридический</button>
+						<button onclick="selectQuantity(3, this.innerText, 1)">Магистратура</button>
+					</div>
+				</div>
+				<div class="split-btn">
+					<button class="primary-btn" id="btn2" onclick="toggleDropdown('dropdown2')">Форма обучения</button>
+					<div class="dropdown-content" id="dropdown1">
+						<button onclick="selectQuantity(1, this.innerText, 2)">Экономический</button>
+						<button onclick="selectQuantity(2, this.innerText, 2)">Юридический</button>
+						<button onclick="selectQuantity(3, this.innerText, 2)">Магистратура</button>
+					</div>
+				</div>
+				<div class="split-btn">
+					<button class="primary-btn" id="btn3" onclick="toggleDropdown('dropdown3')">Курс</button>
+					<div class="dropdown-content" id="dropdown1">
+						<button onclick="selectQuantity(1, this.innerText, 3)">Экономический</button>
+						<button onclick="selectQuantity(2, this.innerText, 3)">Юридический</button>
+						<button onclick="selectQuantity(3, this.innerText, 3)">Магистратура</button>
+					</div>
+				</div>
+				<div class="split-btn">
+					<button class="primary-btn" id="btn4" onclick="toggleDropdown('dropdown4')">Группа</button>
+					<div class="dropdown-content" id="dropdown1">
+						<button onclick="selectQuantity(1, this.innerText, 4)">Экономический</button>
+						<button onclick="selectQuantity(2, this.innerText, 4)">Юридический</button>
+						<button onclick="selectQuantity(3, this.innerText, 4)">Магистратура</button>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
 
-	<script src="https://telegram.org/js/telegram-web-app.js"></script>
-	<script src="app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

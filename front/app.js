@@ -94,4 +94,61 @@ let p = document.createElement("p");
 p.innerText = `${tg.initDataUnsafe.user.first_name}
 ${tg.initDataUnsafe.user.last_name}`;
 
-usercard.appendChild(p);
+usercard.appendChild("Привет, " + p);
+
+function showDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.opacity = "1";
+    dropdown.style.pointerEvents = "all";
+}
+
+function hideDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.opacity = "0";
+    dropdown.style.pointerEvents = "none";
+}
+
+function selectQuantity(itemId, text, btnId) {
+	var btnClick, dropdownName
+    switch (btnId) {
+		case 1:
+			btnClick = "btn1"
+			dropdownName = "dropdown1"
+			break;
+		
+		case 2:
+			btnClick = "btn2"
+			dropdownName = "dropdown2"
+			break;
+
+		case 3:
+			btnClick = "btn3"
+			dropdownName = "dropdown3"
+			break;
+		
+		case 4:
+			btnClick = "btn4"
+			dropdownName = "dropdown4"
+			break;
+		
+		default:
+			break;
+	}
+	var btn = document.getElementById(btnClick);
+    btn.innerText = text;
+    // Hide the dropdown content
+    var dropdown = document.getElementById(dropdownName);
+    dropdown.style.opacity = "0";
+    dropdown.style.pointerEvents = "none";
+}
+
+function toggleDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    if (dropdown.style.opacity === "1") {
+        dropdown.style.opacity = "0";
+        dropdown.style.pointerEvents = "none";
+    } else {
+        dropdown.style.opacity = "1";
+        dropdown.style.pointerEvents = "all";
+    }
+}
