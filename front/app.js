@@ -8,13 +8,6 @@ tg.MainButton.color = '#2cab37';
 
 let item = "";
 
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let btn4 = document.getElementById("btn4");
-let btn5 = document.getElementById("btn5");
-let btn6 = document.getElementById("btn6");
-
 btn1.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
@@ -109,35 +102,15 @@ function hideDropdown(dropdownId) {
 }
 
 function selectQuantity(itemId, text, btnId) {
-	var btnClick, dropdownName
-    switch (btnId) {
-		case 1:
-			btnClick = "btn1"
-			dropdownName = "dropdown1"
-			break;
-		
-		case 2:
-			btnClick = "btn2"
-			dropdownName = "dropdown2"
-			break;
-
-		case 3:
-			btnClick = "btn3"
-			dropdownName = "dropdown3"
-			break;
-		
-		case 4:
-			btnClick = "btn4"
-			dropdownName = "dropdown4"
-			break;
-		
-		default:
-			break;
-	}
-	var btn = document.getElementById(btnClick);
+    var btn = document.getElementById("btn" + btnId);
     btn.innerText = text;
+    btn.disabled = false;
+    var prevBtn = document.getElementById("btn" + (btnId - 1));
+    if (prevBtn.innerText !== "Факультет") {
+        btn.disabled = false;
+    }
     // Hide the dropdown content
-    var dropdown = document.getElementById(dropdownName);
+    var dropdown = document.getElementById("dropdown" + btnId);
     dropdown.style.opacity = "0";
     dropdown.style.pointerEvents = "none";
 }

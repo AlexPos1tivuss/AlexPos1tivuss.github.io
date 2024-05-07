@@ -23,6 +23,11 @@ body {
 
 .item {
 	text-align: center;
+	height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Adjust the margin from the top */
+    display: block;
+	margin-left: auto; /* Center horizontally */
+    margin-right: auto;
 }
 
 .btn {
@@ -73,7 +78,9 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s;
+    z-index: 1; /* Ensure the dropdown content appears above other elements */
 }
+
 
 .dropdown-content button {
     display: block;
@@ -93,4 +100,13 @@ body {
 .split-btn:hover .dropdown-content {
     opacity: 1;
     pointer-events: all;
+}
+
+.animated-gif {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Adjust the margin from the top */
+    display: block; /* Ensure it's displayed as a block element */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }

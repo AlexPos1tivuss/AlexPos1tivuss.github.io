@@ -3,44 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv='cache-control' content='no-cache'> 
+	<meta http-equiv='expires' content='0'> 
+	<meta http-equiv='pragma' content='no-cache'>
+	<link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="usercard" id="usercard"></div>
+	<img src="../images/sova.gif" alt="Animated GIF" class="animated-gif">
     <div class="container">
         <div class="inner">
             <div class="column">
-                <div class="split-btn">
-					<button class="primary-btn" id="btn1" onclick="toggleDropdown('dropdown1')">Факультет</button>
-					<div class="dropdown-content" id="dropdown1">
-						<button onclick="selectQuantity(1, this.innerText, 1)">Экономический</button>
-						<button onclick="selectQuantity(2, this.innerText, 1)">Юридический</button>
-						<button onclick="selectQuantity(3, this.innerText, 1)">Магистратура</button>
+                <div class="item">
+					<div class="split-btn">
+						<button class="primary-btn" id="btn1" onclick="toggleDropdown('dropdown1')">Факультет</button>
+						<div class="dropdown-content" id="dropdown1">
+							<button onclick="selectQuantity(1, this.innerText, 1)">Экономический</button>
+							<button onclick="selectQuantity(2, this.innerText, 1)">Юридический</button>
+							<button onclick="selectQuantity(3, this.innerText, 1)">Магистратура</button>
+						</div>
 					</div>
 				</div>
-				<div class="split-btn">
-					<button class="primary-btn" id="btn2" onclick="toggleDropdown('dropdown2')">Форма обучения</button>
-					<div class="dropdown-content" id="dropdown1">
-						<button onclick="selectQuantity(1, this.innerText, 2)">Экономический</button>
-						<button onclick="selectQuantity(2, this.innerText, 2)">Юридический</button>
-						<button onclick="selectQuantity(3, this.innerText, 2)">Магистратура</button>
+				<div class="item">
+					<div class="split-btn">
+						<button class="primary-btn" id="btn2" onclick="toggleDropdown('dropdown2')" disabled>Форма обучения</button>
+						<div class="dropdown-content" id="dropdown2">
+							<button onclick="selectQuantity(1, this.innerText, 2)">Заочная</button>
+							<button onclick="selectQuantity(2, this.innerText, 2)">Дневная</button>
+							<button onclick="selectQuantity(3, this.innerText, 2)">Заочная сокращенная</button>
+						</div>
 					</div>
 				</div>
-				<div class="split-btn">
-					<button class="primary-btn" id="btn3" onclick="toggleDropdown('dropdown3')">Курс</button>
-					<div class="dropdown-content" id="dropdown1">
-						<button onclick="selectQuantity(1, this.innerText, 3)">Экономический</button>
-						<button onclick="selectQuantity(2, this.innerText, 3)">Юридический</button>
-						<button onclick="selectQuantity(3, this.innerText, 3)">Магистратура</button>
+				<div class="item">
+					<div class="split-btn">
+						<button class="primary-btn" id="btn3" onclick="toggleDropdown('dropdown3')" disabled>Курс</button>
+						<div class="dropdown-content" id="dropdown3">
+							<button onclick="selectQuantity(1, this.innerText, 3)">1</button>
+							<button onclick="selectQuantity(2, this.innerText, 3)">2</button>
+							<button onclick="selectQuantity(3, this.innerText, 3)">3</button>
+							<button onclick="selectQuantity(4, this.innerText, 3)">4</button>
+						</div>
 					</div>
 				</div>
-				<div class="split-btn">
-					<button class="primary-btn" id="btn4" onclick="toggleDropdown('dropdown4')">Группа</button>
-					<div class="dropdown-content" id="dropdown1">
-						<button onclick="selectQuantity(1, this.innerText, 4)">Экономический</button>
-						<button onclick="selectQuantity(2, this.innerText, 4)">Юридический</button>
-						<button onclick="selectQuantity(3, this.innerText, 4)">Магистратура</button>
+				<div class="item">
+					<div class="split-btn">
+						<button class="primary-btn" id="btn4" onclick="toggleDropdown('dropdown4')" disabled>Группа</button>
+						<div class="dropdown-content" id="dropdown4">
+							<button onclick="selectQuantity(1, this.innerText, 4)">2220 ИСИТ</button>
+							<button onclick="selectQuantity(2, this.innerText, 4)">2221 ИСИТ</button>
+						</div>
 					</div>
 				</div>
             </div>
